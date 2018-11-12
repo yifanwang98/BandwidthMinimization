@@ -1,4 +1,12 @@
-# BandwidthMinimization
+# Bandwidth Minimization
+
+<b>Input description: </b>A graph G = (V, E), representing an n × n matrix M of zero and non-zero elements.  
+  
+<b>Problem description: </b>Which permutation p of the vertices minimizes the length of the longest edge when the vertices are ordered on a line — i.e. , minimizes <code>max_{(i,j)∈ E}|p(i) − p(j)|</code>?
+
+(From *The Algorithm Design Manual* by Steve Skiena)
+
+---
 
 The bandwidth problem takes as input a graph G, with n vertices and m edges (ie. pairs of vertices). The goal is to find a permutation of the vertices on the line which minimizes the maximum length of any edge. This is better understood through an example. Suppose G consists of 5 vertices and the edges (v1, v2), (v1,v3), (v1,v4), and (v1,v5). We must map each vertex to a distinct number between 1 and n. Under the mapping vi → i, the last edge spans a distance of four (ie. 5-1). However, the permutation {2, 3, 1, 4, 5} is better, for none of the edges spans a distance of more than two. In fact, it is a permutation which minimizes the maximum length of the edges in G, as is any permutation where 1 is in the center.
   
